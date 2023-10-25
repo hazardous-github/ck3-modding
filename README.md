@@ -3,7 +3,7 @@
 Feel free to just rename & remove tags and add it straight to your files
 
 ## Oct 24 v2 Changelog:
-Issue: warfare_legacy_5 causes all houseguards from each culture to appear, regardless of player's own culture. multiple houseguards will populate list. Fixed by changing each culture's can_recruit block for house guards within common\men_at_arms_types
+Issue: warfare_legacy_5 causes all houseguards from each culture to appear, regardless of player's own culture. multiple houseguards will show as recruitable, each of the houseguards from each culture will populate list. Fixed by changing each culture's can_recruit block for house guards within common\men_at_arms_types
 (changing structure from "has_cultural_pillar = heritage..." to "culture = { has_cultural_pillar = heritage... }").
 
 Deleted irrelevant files (deletion including 00_riekling_army_maa) from github upload. Only the changed relevant maa files are present.
