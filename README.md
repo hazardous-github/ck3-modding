@@ -33,7 +33,7 @@ missing dds: copied goblin_house_guard.dds, renamed copy to (otherwise missing) 
 			}
 		}
 ```
-ISSUE: falmer_betrayed culture still get two houseguards, not sure why. doesnt seem to be the falmer or dwemer houseguards.
+ISSUE: falmer_betrayed culture still get two houseguards, not sure why. doesnt seem to be the falmer or dwemer houseguards. using "culture = culture:falmer_betrayed" trigger instead of HZ ADDED trigger also doesnt seem to fix, but may require double-checking.
 
 there may also be  issues for falmer/betrayed/riekling characters having access to two+ houseguards, if they merge cultures with another heritage pillar that does have houseguards?
 
