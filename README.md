@@ -2,6 +2,8 @@
 
 Feel free to just rename & remove tags and add it straight to your files
 
+
+
 Oct 24 Changelog: (formatting kind of sucks, forwarding text to github)
 
 Issue: warfare_legacy_5 causes all houseguards from each culture to appear, regardless of player's own culture. multiple houseguard listings will populate list.
@@ -12,13 +14,13 @@ Besides the fixes, there are additional edits which I tagged with "HZ" when poss
 
 common/men_at_arms_types/00_maa_types :: house_guard entry has two can_recruit blocks; commented out one to be consistent with rest of file.
 
-00_riekling_army_maa file: WORKS DURING TESTS AS RIEKLING. rieklings have access to both goblin houseguard & riekling houseguard. issue occurs however where everyone's list, regardless of culture, has access to riekling houseguard (at warfare_legacy_5).
+00_riekling_army_maa file: TESTED. rieklings have access to both goblin houseguard & riekling houseguard. issue occurs however where everyone's list, regardless of culture, has access to riekling houseguard (at warfare_legacy_5).
 
-to fix, changed "has_cultural_pillar" trigger to "culture =" trigger.
+to fix, changed "has_cultural_pillar" trigger to "this = culture:riekling" trigger.
 
 missing dds: copied goblin_house_guard.dds, renamed copy to (otherwise missing) "riekling_house_guard.dds" under men_at_arms_big
 
-00_falmer_army_maa file: UNTESTED
+00_falmer_army_maa file: TESTED
 	changed "this = culture:falmer_betrayed" to "culture = culture:falmer_betrayed" (ditto for regular falmer).
 	however, because of lack of heritage condition, any divergent/split culture may lose houseguard.
 	so then commented out the above "culture = culture:falmer_betrayed" to replace with (ditto for regular falmer):
@@ -33,7 +35,9 @@ missing dds: copied goblin_house_guard.dds, renamed copy to (otherwise missing) 
 			}
 		}
 ```
-this may also create issue for falmer/betrayed characters having access to two houseguards, if they merge cultures with another heritage pillar that does have houseguards?
+ISSUE: falmer_betrayed culture still get two houseguards, not sure why. doesnt seem to be the falmer or dwemer houseguards.
+
+there may also be  issues for falmer/betrayed/riekling characters having access to two+ houseguards, if they merge cultures with another heritage pillar that does have houseguards?
 
 localization:
 00_jimmy_cultural_armies_l_english.yml:
