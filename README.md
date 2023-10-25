@@ -3,6 +3,7 @@
 Feel free to just rename & remove tags and add it straight to your files
 
 Oct 24 Changelog:
+
 Issue: warfare_legacy_5 causes all houseguards from each culture to appear, regardless of player's own culture. multiple houseguard listings will populate list.
 Fixed by changing structure from "has_cultural_pillar = heritage..." to "culture = { has_cultural_pillar = heritage... }"
 Besides the fixes, there are additional edits which I tagged with "HZ" when possible, but also list below:
